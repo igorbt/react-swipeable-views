@@ -13,6 +13,7 @@
     "docs:browser:production": "cd docs && NODE_ENV=docs-browser-production babel-node webpack.js",
     "docs:native:development": "NODE_ENV=docs-native-development node node_modules/react-native/local-cli/cli.js start --reset-cache --verbose",
     "prepublish": "npm run build && pkgfiles",
+    "postinstall": "postinstall-build lib 'npm run build'",
     "flow": "flow"
   },
   "repository": {
@@ -34,6 +35,7 @@
   "dependencies": {
     "babel-runtime": "^6.11.6",
     "keycode": "^2.1.6",
+    "postinstall-build": "^2.1.0",
     "react-event-listener": "^0.2.1",
     "warning": "^3.0.0"
   },
